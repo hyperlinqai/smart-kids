@@ -2,24 +2,24 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Parent of Emma, Grade 3",
-    quote: "Emma absolutely loves going to BrightMinds! Her confidence has grown tremendously, and she's genuinely excited about learning. The teachers really understand how to connect with each child.",
-    initials: "SM",
+    name: "Fatima Al-Zahra",
+    role: "Parent of Omar, Age 7",
+    quote: "Omar came home so excited after the STEM workshop! He kept talking about the volcano experiment for days. Sarah made learning so much fun and engaging.",
+    initials: "FA",
     color: "primary"
   },
   {
-    name: "Michael Johnson",
-    role: "Parent of Alex, Grade 5",
-    quote: "The STEM program here is exceptional. Alex has discovered a passion for robotics and coding that I never knew existed. The hands-on approach really works!",
-    initials: "MJ",
+    name: "Ahmed Hassan",
+    role: "Parent of Layla, Age 6",
+    quote: "The small group size was perfect for Layla. She's usually shy but Sarah made her feel comfortable to participate. Great value for AED 75!",
+    initials: "AH",
     color: "secondary"
   },
   {
-    name: "Lisa Park",
-    role: "Parent of Sophie, Grade 2",
-    quote: "The teachers at BrightMinds genuinely care about each child's success. Sophie was struggling with reading, but the personalized support has been amazing.",
-    initials: "LP",
+    name: "Priya Sharma",
+    role: "Parent of Arjun, Age 8",
+    quote: "My son is now obsessed with science! He built a simple robot at home after the workshop and keeps asking when the next session is. Sarah's passion for STEM is truly infectious.",
+    initials: "PS",
     color: "accent"
   }
 ];
@@ -28,13 +28,41 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-6">
+        {/* Tutor Bio Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-            What <span className="text-primary">Parents Say</span>
+            Meet Your <span className="text-primary">STEM Educator</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Hear from families who have experienced the BrightMinds difference firsthand.
-          </p>
+
+          <div className="max-w-4xl mx-auto bg-card p-8 rounded-2xl border border-border">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/logo.jpeg"
+                  alt="Sarah Ahmed - STEM Educator"
+                  className="w-32 h-32 rounded-full object-cover border-4 border-primary"
+                />
+              </div>
+              <div className="text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Sarah Ahmed</h3>
+                <p className="text-lg text-primary mb-4">Passionate STEM Educator</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Led by Sarah Ahmed, passionate STEM educator with 8+ years experience in making science fun and accessible for young minds.
+                  Specialized in hands-on learning approaches that spark curiosity and build confidence in children aged 5-10.
+                </p>
+                <div className="mt-4 text-sm text-muted-foreground">
+                  <span className="font-semibold">✨ Trusted by Dubai parents</span> • 200+ kids taught • 98% satisfaction rate
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial Section */}
+        <div className="text-center mb-12">
+          <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+            What <span className="text-secondary">Parents Say</span>
+          </h3>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

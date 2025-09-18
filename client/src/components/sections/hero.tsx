@@ -1,18 +1,14 @@
-import { CheckCircle, Users, GraduationCap, Calendar } from "lucide-react";
-import heroImage from "@assets/pexels-rdne-8035138_1758180883690.jpg";
+import { CheckCircle, Users, GraduationCap, Calendar, MessageCircle } from "lucide-react";
 
 export default function Hero() {
-  const handleScheduleDemo = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  const handleWhatsAppBooking = () => {
+    window.open('https://wa.me/971501234567?text=Hi! I want to book a STEM workshop for my child', '_blank');
   };
 
   const handleLearnMore = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const detailsSection = document.getElementById('details');
+    if (detailsSection) {
+      detailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -23,51 +19,52 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                Nurturing <span className="text-primary">Young Minds</span> for Tomorrow
+                Hands-on <span className="text-primary">STEM Workshop</span> for Kids (5–10 yrs) — Just <span className="text-secondary">AED 75</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Give your child the gift of personalized education, creative development, and academic excellence in our supportive learning environment.
+                Fun, safe, small-group learning (6–8 kids only)
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={handleScheduleDemo}
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg"
-                data-testid="button-schedule-demo"
+              <button
+                onClick={handleWhatsAppBooking}
+                className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg flex items-center justify-center gap-2"
+                data-testid="button-whatsapp-booking"
               >
-                Schedule a Demo
+                <MessageCircle className="w-5 h-5" />
+                Book via WhatsApp – Limited Seats
               </button>
-              <button 
+              <button
                 onClick={handleLearnMore}
                 className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary/90 transition-colors"
                 data-testid="button-learn-more"
               >
-                Learn More
+                View Details
               </button>
             </div>
             
             <div className="flex items-center space-x-8 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground" data-testid="stat-students">500+</div>
-                <div className="text-sm text-muted-foreground">Happy Students</div>
+                <div className="text-2xl font-bold text-foreground" data-testid="stat-students">6-8</div>
+                <div className="text-sm text-muted-foreground">Kids Only</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground" data-testid="stat-teachers">25+</div>
-                <div className="text-sm text-muted-foreground">Expert Teachers</div>
+                <div className="text-2xl font-bold text-foreground" data-testid="stat-teachers">AED 75</div>
+                <div className="text-sm text-muted-foreground">All Inclusive</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground" data-testid="stat-years">10+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-foreground" data-testid="stat-years">5-10</div>
+                <div className="text-sm text-muted-foreground">Years Age</div>
               </div>
             </div>
           </div>
           
           <div className="relative">
-            <img 
-              src={heroImage} 
-              alt="Happy students playing with colorful parachute in outdoor school setting" 
-              className="rounded-2xl shadow-2xl w-full h-auto animate-float" 
+            <img
+              src="/hero.jpg"
+              alt="Kids doing fun STEM experiments and activities"
+              className="rounded-2xl shadow-2xl w-full h-auto animate-float object-cover"
               loading="eager"
               data-testid="img-hero"
             />

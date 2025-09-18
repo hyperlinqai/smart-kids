@@ -4,8 +4,8 @@ import Hero from "@/components/sections/hero";
 import Features from "@/components/sections/features";
 import Approach from "@/components/sections/approach";
 import Testimonials from "@/components/sections/testimonials";
+import FAQ from "@/components/sections/faq";
 import Contact from "@/components/sections/contact";
-import CTA from "@/components/sections/cta";
 
 export default function Home() {
   return (
@@ -26,8 +26,8 @@ export default function Home() {
         <Features />
         <Approach />
         <Testimonials />
+        <FAQ />
         <Contact />
-        <CTA />
       </main>
       
       <Footer />

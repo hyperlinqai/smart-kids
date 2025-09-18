@@ -14,14 +14,19 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">BM</span>
-              </div>
-              <span className="font-bold text-xl">BrightMinds Academy</span>
+              <img
+                src="/logo.jpeg"
+                alt="HomeNest Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
+              <span className="font-bold text-xl">STEM Kids Workshop</span>
             </div>
             <p className="text-background/70">
-              Nurturing young minds for tomorrow through personalized education, creative development, and academic excellence.
+              Fun, hands-on STEM learning for kids aged 5-10. Small groups, big discoveries, and unforgettable learning experiences.
             </p>
+            <div className="bg-primary/20 p-4 rounded-lg mt-4">
+              <p className="text-background font-semibold">🎯 AED 75 per child - All materials included!</p>
+            </div>
             <div className="flex space-x-4">
               <a 
                 href="#" 

@@ -70,47 +70,63 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              Ready to <span className="text-primary">Get Started</span>?
+              Ready to <span className="text-primary">Book Your Spot</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Schedule a visit, ask questions, or begin your child's enrollment process today. We're here to help you every step of the way.
+              Secure your child's spot in our exciting STEM workshop! Limited seats available - book now via WhatsApp or fill out the form below.
             </p>
+
+            {/* Primary WhatsApp CTA */}
+            <div className="mt-8">
+              <button
+                onClick={() => window.open('https://wa.me/971501234567?text=Hi! I want to book a STEM workshop for my child', '_blank')}
+                className="bg-green-600 text-white px-12 py-4 rounded-lg text-xl font-semibold hover:bg-green-700 transition-colors shadow-lg inline-flex items-center gap-3"
+              >
+                📱 Book via WhatsApp – Limited Seats
+              </button>
+              <p className="text-sm text-muted-foreground mt-2">Fastest way to secure your spot!</p>
+            </div>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-6">Workshop Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">Address</div>
-                      <div className="text-muted-foreground" data-testid="contact-address">123 Learning Lane, Education City, EC 12345</div>
+                      <div className="font-semibold text-foreground">Location</div>
+                      <div className="text-muted-foreground" data-testid="contact-address">Jumeirah, Dubai (exact address shared upon booking)</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
                       <Phone className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">Phone</div>
-                      <div className="text-muted-foreground" data-testid="contact-phone">(555) 123-BRIGHT</div>
+                      <div className="font-semibold text-foreground">WhatsApp</div>
+                      <div className="text-muted-foreground" data-testid="contact-phone">+971 50 123 4567</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <div className="font-semibold text-foreground">Email</div>
-                      <div className="text-muted-foreground" data-testid="contact-email">hello@brightmindsacademy.com</div>
+                      <div className="text-muted-foreground" data-testid="contact-email">sarah@stemkidsworkshop.com</div>
                     </div>
                   </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-primary/10 rounded-lg">
+                  <h4 className="font-semibold text-foreground mb-2">💰 Price: AED 75 per child</h4>
+                  <p className="text-sm text-muted-foreground">Includes all materials + participation certificate</p>
                 </div>
               </div>
               
