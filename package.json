@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "node build.js",
+    "build": "ROLLUP_NO_NATIVE=1 vite build",
+    "build:custom": "node build.js",
     "build:vite": "vite build",
     "build:client": "vite build",
     "build:server": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
