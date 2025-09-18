@@ -1,0 +1,18 @@
+SCREENSHOT PLACEHOLDER
+
+To create a proper screenshot.png file:
+
+1. Create a 400x300px image with the BrightMinds Academy branding
+2. Use the theme colors: 
+   - Background: #68cef5 (sky blue)
+   - Text: White
+3. Include text: "BrightMinds Academy" and "Educational Landing Theme"
+4. Save as screenshot.png in the theme root directory
+
+You can use any image editor like:
+- Canva.com (free online editor)
+- GIMP (free desktop editor)  
+- Photoshop
+- Or any online PNG generator
+
+The screenshot will appear in WordPress Admin > Appearance > Themes

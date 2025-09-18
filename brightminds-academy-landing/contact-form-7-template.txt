@@ -1,0 +1,85 @@
+CONTACT FORM 7 SETUP INSTRUCTIONS
+===============================================
+
+Copy and paste this Contact Form 7 form code when creating your enrollment form:
+
+FORM FIELDS:
+-----------
+<div class="form-row">
+    <div class="form-group">
+        [text* parent-first-name class:form-input placeholder "Parent First Name"]
+    </div>
+    <div class="form-group">
+        [text* parent-last-name class:form-input placeholder "Parent Last Name"]
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group">
+        [email* email class:form-input placeholder "Email Address"]
+    </div>
+    <div class="form-group">
+        [tel* phone class:form-input placeholder "Phone Number"]
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group">
+        [text* child-first-name class:form-input placeholder "Child's First Name"]
+    </div>
+    <div class="form-group">
+        [text* child-last-name class:form-input placeholder "Child's Last Name"]
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group">
+        [select* child-age class:form-select include_blank "Child's Age" "5 years old" "6 years old" "7 years old" "8 years old" "9 years old" "10 years old" "11 years old" "12 years old" "13 years old" "14 years old" "15 years old"]
+    </div>
+    <div class="form-group">
+        [select* program-interest class:form-select include_blank "Program Interest" "Creative Learning Program" "Academic Excellence Program" "STEM Innovation Program" "Arts & Culture Program" "Leadership Development" "Full Comprehensive Program" "Not sure - help me decide"]
+    </div>
+</div>
+
+<div class="form-group">
+    [textarea child-interests class:form-textarea placeholder "Tell us about your child's interests and learning style..."]
+</div>
+
+<div class="form-group">
+    [textarea questions class:form-textarea placeholder "Any questions about our programs or enrollment process?"]
+</div>
+
+[submit class:btn class:btn-primary class:btn-xl "🎓 Submit Enrollment Application"]
+
+MAIL SETTINGS:
+--------------
+To: hello@brightmindsacademy.com
+From: [email]
+Subject: New Enrollment Inquiry - [child-first-name] [child-last-name]
+
+Message Body:
+New enrollment inquiry submitted:
+
+PARENT INFORMATION:
+Name: [parent-first-name] [parent-last-name]
+Email: [email]
+Phone: [phone]
+
+CHILD INFORMATION:
+Name: [child-first-name] [child-last-name]
+Age: [child-age]
+Program Interest: [program-interest]
+
+ADDITIONAL DETAILS:
+Child's Interests: [child-interests]
+Questions: [questions]
+
+Submitted: [_date] at [_time]
+IP Address: [_remote_ip]
+
+ADDITIONAL SETTINGS:
+-------------------
+Add this to your form's Additional Settings:
+
+demo_mode: on
+on_sent_ok: "gtag('event', 'form_submit', {'event_category': 'enrollment', 'event_label': 'contact_form'});"
