@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors from Design */
+  --background: hsl(200, 100%, 97%);
+  --foreground: hsl(222, 17%, 16%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 17%, 16%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 17%, 16%);
+  --primary: hsl(22, 100%, 65%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(199, 89%, 70%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --accent: hsl(75, 64%, 65%);
+  --accent-foreground: hsl(222, 17%, 16%);
+  --destructive: hsl(346, 87%, 49%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --ring: hsl(22, 100%, 65%);
+  --radius: 0.75rem;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, 'Cascadia Code', monospace;
+}
+
+.dark {
+  --background: hsl(222, 17%, 16%);
+  --foreground: hsl(200, 100%, 97%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(200, 100%, 97%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(200, 100%, 97%);
+  --primary: hsl(22, 100%, 65%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(199, 89%, 70%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(215, 16%, 47%);
+  --muted-foreground: hsl(210, 40%, 96%);
+  --accent: hsl(75, 64%, 65%);
+  --accent-foreground: hsl(222, 17%, 16%);
+  --destructive: hsl(346, 87%, 49%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --ring: hsl(22, 100%, 65%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--background) 0%, hsl(199, 89%, 95%) 100%);
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
