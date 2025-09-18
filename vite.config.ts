@@ -24,6 +24,12 @@ export default defineConfig({
       external: [],
     },
   },
+  define: {
+    global: 'globalThis',
+  },
+  optimizeDeps: {
+    exclude: ['@rollup/rollup-linux-x64-gnu', '@rollup/rollup-linux-x64-musl']
+  },
   server: {
     fs: {
       strict: true,
