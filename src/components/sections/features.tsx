@@ -27,13 +27,13 @@ export default function Features() {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-            What <span className="text-primary">They'll Do</span>
+            What <span className="text-primary">They&apos;ll Do</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Exciting hands-on activities that make STEM learning fun and engaging for young minds.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
@@ -43,10 +43,10 @@ export default function Features() {
               accent: "bg-accent/10 text-accent",
               destructive: "bg-destructive/10 text-destructive"
             };
-            
+
             return (
-              <div 
-                key={feature.title} 
+              <div
+                key={feature.title}
                 className="bg-card p-8 rounded-2xl shadow-lg card-hover border border-border"
                 data-testid={`feature-card-${index}`}
               >

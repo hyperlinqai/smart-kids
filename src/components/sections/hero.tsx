@@ -1,8 +1,10 @@
+"use client";
+
 import { CheckCircle, Users, GraduationCap, Calendar, MessageCircle } from "lucide-react";
 
 export default function Hero() {
   const handleWhatsAppBooking = () => {
-    window.open('https://wa.me/971501234567?text=Hi! I want to book a STEM workshop for my child', '_blank');
+    window.open('https://wa.me/97521234476?text=Hi! I want to book a STEM workshop for my child', '_blank');
   };
 
   const handleLearnMore = () => {
@@ -25,7 +27,7 @@ export default function Hero() {
                 Fun, safe, small-group learning (6–8 kids only)
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleWhatsAppBooking}
@@ -43,7 +45,7 @@ export default function Hero() {
                 View Details
               </button>
             </div>
-            
+
             <div className="flex items-center space-x-8 pt-4">
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground" data-testid="stat-students">6-8</div>
@@ -59,7 +61,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          
+
           <div className="relative">
             <img
               src="/hero.jpg"
@@ -68,13 +70,13 @@ export default function Hero() {
               loading="eager"
               data-testid="img-hero"
             />
-            
+
             {/* Floating elements for visual interest */}
-            <div className="absolute -top-6 -right-6 bg-accent text-accent-foreground p-4 rounded-full shadow-lg animate-float" style={{animationDelay: '-2s'}}>
+            <div className="absolute -top-6 -right-6 bg-accent text-accent-foreground p-4 rounded-full shadow-lg animate-float" style={{ animationDelay: '-2s' }}>
               <CheckCircle className="w-8 h-8" />
             </div>
-            
-            <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground p-4 rounded-full shadow-lg animate-float" style={{animationDelay: '-4s'}}>
+
+            <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground p-4 rounded-full shadow-lg animate-float" style={{ animationDelay: '-4s' }}>
               <GraduationCap className="w-8 h-8" />
             </div>
           </div>

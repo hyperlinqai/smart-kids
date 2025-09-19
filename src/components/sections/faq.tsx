@@ -39,7 +39,7 @@ export default function FAQ() {
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Got questions? We've got answers! Here are the most common questions parents ask.
+            Got questions? We&apos;ve got answers! Here are the most common questions parents ask.
           </p>
         </div>
 
@@ -68,8 +68,8 @@ export default function FAQ() {
 
         {/* CTA after FAQ */}
         <div className="text-center mt-12">
-          <button 
-            onClick={() => window.open('https://wa.me/971501234567?text=Hi! I have a question about the STEM workshop', '_blank')}
+          <button
+            onClick={() => window.open('https://wa.me/97521234476?text=Hi! I have a question about the STEM workshop', '_blank')}
             className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary/90 transition-colors"
           >
             Still have questions? Ask us on WhatsApp

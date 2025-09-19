@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -25,13 +27,13 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="HomeNest Logo"
               className="w-10 h-10 rounded-lg object-cover"
             />
             <span className="font-bold text-xl text-foreground">STEM Kids Workshop</span>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => handleNavClick('activities')}
@@ -62,18 +64,18 @@ export default function Header() {
               FAQ
             </button>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <button
-              onClick={() => window.open('https://wa.me/971501234567?text=Hi! I want to book a STEM workshop for my child', '_blank')}
+              onClick={() => window.open('https://wa.me/97521234476?text=Hi! I want to book a STEM workshop for my child', '_blank')}
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors font-medium"
               data-testid="button-book-header"
             >
               Book Now
             </button>
-            
-            <button 
-              className="md:hidden p-2" 
+
+            <button
+              className="md:hidden p-2"
               aria-label="Toggle menu"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               data-testid="button-mobile-menu"

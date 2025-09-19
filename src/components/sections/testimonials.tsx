@@ -38,7 +38,7 @@ export default function Testimonials() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="Sarah Ahmed - STEM Educator"
                   className="w-32 h-32 rounded-full object-cover border-4 border-primary"
                 />
@@ -64,7 +64,7 @@ export default function Testimonials() {
             What <span className="text-secondary">Parents Say</span>
           </h3>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => {
             const colorClasses = {
@@ -72,10 +72,10 @@ export default function Testimonials() {
               secondary: "bg-secondary text-secondary-foreground",
               accent: "bg-accent text-accent-foreground"
             };
-            
+
             return (
-              <div 
-                key={testimonial.name} 
+              <div
+                key={testimonial.name}
                 className="bg-card p-8 rounded-2xl shadow-lg border border-border"
                 data-testid={`testimonial-card-${index}`}
               >

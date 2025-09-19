@@ -1,43 +1,32 @@
-# HomeNest
+# STEM Kids Workshop
 
-A modern full-stack web application built with React, TypeScript, and Express. This project features a responsive landing page with contact form functionality, built using modern web technologies and best practices.
+A modern Next.js frontend application for a STEM kids workshop. This project features a responsive landing page with contact form functionality, built using modern web technologies and best practices.
 
 ## Features
 
-- **Modern React Frontend**: Built with React 18, TypeScript, and Vite for fast development
+- **Next.js Frontend**: Built with Next.js 15, React 18, and TypeScript
 - **Responsive Design**: Mobile-first design using Tailwind CSS
 - **UI Components**: Shadcn/ui component library with Radix UI primitives
-- **Express Backend**: RESTful API with TypeScript
-- **Database Integration**: PostgreSQL with Drizzle ORM
 - **Form Handling**: React Hook Form with Zod validation
-- **State Management**: TanStack Query for server state
-- **Routing**: Wouter for lightweight client-side routing
+- **Client-side Contact Form**: Email integration for form submissions
+- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Performance**: Optimized images and fonts with Next.js built-in optimizations
 
 ## Tech Stack
 
-### Frontend
+- Next.js 15 with App Router
 - React 18 with TypeScript
-- Vite for build tooling
 - Tailwind CSS for styling
 - Shadcn/ui + Radix UI for components
 - React Hook Form + Zod for forms
-- TanStack Query for data fetching
-- Wouter for routing
 - Framer Motion for animations
-
-### Backend
-- Node.js with Express
-- TypeScript with ES modules
-- PostgreSQL database
-- Drizzle ORM for database operations
-- Express Session for session management
+- Lucide React for icons
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- PostgreSQL database
-- npm or yarn
+- Node.js 18+
+- npm, yarn, or pnpm
 
 ### Installation
 
@@ -52,49 +41,44 @@ cd HomeNest
 npm install
 ```
 
-3. Set up environment variables:
-Create a `.env` file in the root directory:
-```env
-DATABASE_URL=your_postgresql_connection_string
-PORT=5000
-```
-
-4. Set up the database:
-```bash
-npm run db:push
-```
-
-5. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5000`
+The application will be available at `http://localhost:3000`
 
 ## Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
-- `npm run check` - Type check with TypeScript
-- `npm run db:push` - Push database schema changes
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Type check with TypeScript
 
 ## Project Structure
 
 ```
 HomeNest/
-├── client/                 # Frontend React application
-│   ├── src/
-│   │   ├── components/     # Reusable UI components
-│   │   ├── pages/          # Page components
-│   │   ├── lib/            # Utility functions
-│   │   └── main.tsx        # Application entry point
-│   └── index.html
-├── server/                 # Backend Express application
-│   ├── index.ts           # Server entry point
-│   ├── routes.ts          # API routes
-│   ├── storage.ts         # Database operations
-│   └── vite.ts            # Vite integration
+├── src/
+│   ├── app/                # Next.js App Router
+│   │   ├── layout.tsx      # Root layout
+│   │   ├── page.tsx        # Home page
+│   │   └── globals.css     # Global styles
+│   ├── components/         # Reusable UI components
+│   │   ├── layout/         # Layout components (header, footer)
+│   │   ├── sections/       # Page sections (hero, features, etc.)
+│   │   └── ui/             # Shadcn/ui components
+│   ├── lib/                # Utility functions and schemas
+│   ├── hooks/              # Custom React hooks
+│   └── pages/              # Page components
+├── public/                 # Static assets
+└── package.json
+```
+
+## Contact Form
+
+The contact form uses a client-side approach that opens the user's default email client with pre-filled information. This eliminates the need for a backend while still providing a functional contact mechanism.
 ├── shared/                # Shared types and schemas
 │   └── schema.ts          # Database schemas
 └── package.json

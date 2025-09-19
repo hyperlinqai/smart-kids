@@ -1,6 +1,0 @@
-{
-  "outputDirectory": "dist/public",
-  "env": {
-    "ROLLUP_NO_NATIVE": "1"
-  }
-}

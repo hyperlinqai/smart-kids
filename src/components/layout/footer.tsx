@@ -1,3 +1,5 @@
+"use client";
+
 import { Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
@@ -15,7 +17,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="HomeNest Logo"
                 className="w-10 h-10 rounded-lg object-cover"
               />
@@ -28,17 +30,17 @@ export default function Footer() {
               <p className="text-background font-semibold">🎯 AED 75 per child - All materials included!</p>
             </div>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="text-background/70 hover:text-background transition-colors" 
+              <a
+                href="#"
+                className="text-background/70 hover:text-background transition-colors"
                 aria-label="Facebook"
                 data-testid="link-facebook"
               >
                 <Facebook className="w-6 h-6" />
               </a>
-              <a 
-                href="#" 
-                className="text-background/70 hover:text-background transition-colors" 
+              <a
+                href="#"
+                className="text-background/70 hover:text-background transition-colors"
                 aria-label="Instagram"
                 data-testid="link-instagram"
               >
@@ -46,13 +48,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-background/70">
               <li>
-                <button 
-                  onClick={() => handleNavClick('about')} 
+                <button
+                  onClick={() => handleNavClick('about')}
                   className="hover:text-background transition-colors"
                   data-testid="footer-about"
                 >
@@ -60,8 +62,8 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavClick('programs')} 
+                <button
+                  onClick={() => handleNavClick('programs')}
                   className="hover:text-background transition-colors"
                   data-testid="footer-programs"
                 >
@@ -69,8 +71,8 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavClick('testimonials')} 
+                <button
+                  onClick={() => handleNavClick('testimonials')}
                   className="hover:text-background transition-colors"
                   data-testid="footer-testimonials"
                 >
@@ -78,8 +80,8 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavClick('contact')} 
+                <button
+                  onClick={() => handleNavClick('contact')}
                   className="hover:text-background transition-colors"
                   data-testid="footer-contact"
                 >
@@ -88,7 +90,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Programs</h3>
             <ul className="space-y-2 text-background/70">
@@ -98,23 +100,23 @@ export default function Footer() {
               <li><span className="hover:text-background transition-colors">Creative Arts</span></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
             <div className="space-y-2 text-background/70">
-              <p data-testid="text-address">123 Learning Lane<br />Education City, EC 12345</p>
-              <p data-testid="text-phone">(555) 123-BRIGHT</p>
-              <p data-testid="text-email">hello@brightmindsacademy.com</p>
+              <p data-testid="text-address"> Al Nahada Dubai</p>
+              <p data-testid="text-phone">+97-521234476</p>
+              <p data-testid="text-email">hello@smart-kids.xxyz</p>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
-          <p className="text-background/70">
-            © 2024 BrightMinds Academy. All rights reserved. | 
-            <button className="hover:text-background transition-colors ml-1" data-testid="link-privacy">Privacy Policy</button> | 
+          <div className="text-background/70">
+            © 2025 Smart Kids. All rights reserved. |
+            <button className="hover:text-background transition-colors ml-1" data-testid="link-privacy">Privacy Policy</button> |
             <button className="hover:text-background transition-colors ml-1" data-testid="link-terms">Terms of Service</button>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

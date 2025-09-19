@@ -1,3 +1,5 @@
+"use client";
+
 export default function Approach() {
   return (
     <section id="details" className="py-20">
@@ -12,13 +14,13 @@ export default function Approach() {
                 Everything you need to know about our exciting STEM workshop for kids.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-card p-6 rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-3">📅 Dates/Times</h3>
                 <p className="text-muted-foreground">
-                  • Saturday, Dec 16 - 10:00 AM to 12:00 PM<br/>
-                  • Sunday, Dec 17 - 2:00 PM to 4:00 PM<br/>
+                  • Saturday, Dec 16 - 10:00 AM to 12:00 PM<br />
+                  • Sunday, Dec 17 - 2:00 PM to 4:00 PM<br />
                   • Saturday, Dec 23 - 10:00 AM to 12:00 PM
                 </p>
               </div>
@@ -46,14 +48,14 @@ export default function Approach() {
             </div>
 
             <button
-              onClick={() => window.open('https://wa.me/971501234567?text=Hi! I want to book a STEM workshop for my child', '_blank')}
+              onClick={() => window.open('https://wa.me/97521234476?text=Hi! I want to book a STEM workshop for my child', '_blank')}
               className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors flex items-center gap-2"
               data-testid="button-whatsapp-booking-2"
             >
               Book via WhatsApp – Limited Seats
             </button>
           </div>
-          
+
           <div className="relative">
             <img
               src="/our-learning.jpg"
