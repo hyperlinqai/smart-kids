@@ -8,6 +8,12 @@ const nextConfig = {
       allowedOrigins: ["*"],
     },
   },
+  allowedDevOrigins: [
+    "*.replit.dev", 
+    "*.replit.com", 
+    "127.0.0.1", 
+    "localhost"
+  ],
   async headers() {
     return [
       {
