@@ -12,10 +12,12 @@ export default function Analytics() {
     analytics.fbqInit();
     
     // Track initial pageview
-    analytics.pageview(pathname);
-    
-    // Track GTM pageview
-    analytics.gtmPush({ event: 'pageview', page: pathname });
+    if (pathname) {
+      analytics.pageview(pathname);
+      
+      // Track GTM pageview
+      analytics.gtmPush({ event: 'pageview', page: pathname });
+    }
   }, [pathname]);
 
   return null;

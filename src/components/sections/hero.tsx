@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckCircle, Users, GraduationCap, Calendar, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const handleWhatsAppBooking = () => {
@@ -63,11 +64,13 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <img
+            <Image
               src="/hero.jpg"
               alt="Kids doing fun STEM experiments and activities"
+              width={600}
+              height={400}
               className="rounded-2xl shadow-2xl w-full h-auto animate-float object-cover"
-              loading="eager"
+              priority
               data-testid="img-hero"
             />
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,9 +27,11 @@ export default function Header() {
       <nav className="container mx-auto px-4 lg:px-6 py-4" aria-label="Main navigation">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img
+            <Image
               src="/logo.png"
               alt="HomeNest Logo"
+              width={40}
+              height={40}
               className="w-10 h-10 rounded-lg object-cover"
             />
             <span className="font-bold text-xl text-foreground">STEM Kids Workshop</span>

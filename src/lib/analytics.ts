@@ -41,7 +41,7 @@ export const fbqInit = () => {
   if (typeof window === 'undefined') return;
   if ((window as any).fbq) return;
   
-  !(function(f: any, b: any, e: any, v: any, n: any, t: any, s: any){
+  (function(f: any, b: any, e: any, v: any, n: any, t: any, s: any){
     if (f.fbq) return; 
     n = f.fbq = function(...args: any[]) { 
       n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args) 
@@ -56,7 +56,7 @@ export const fbqInit = () => {
     t.src = v; 
     s = b.getElementsByTagName(e)[0]; 
     s.parentNode.insertBefore(t, s);
-  })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', undefined, undefined, undefined);
 
   if (!FB_PIXEL_ID || FB_PIXEL_ID === 'FB_PIXEL_ID') return;
   (window as any).fbq('init', FB_PIXEL_ID);

@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -37,9 +38,11 @@ export default function Testimonials() {
           <div className="max-w-4xl mx-auto bg-card p-8 rounded-2xl border border-border">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Sarah Ahmed - STEM Educator"
+                  width={128}
+                  height={128}
                   className="w-32 h-32 rounded-full object-cover border-4 border-primary"
                 />
               </div>

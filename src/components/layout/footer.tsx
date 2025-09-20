@@ -1,6 +1,7 @@
 "use client";
 
 import { Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const handleNavClick = (sectionId: string) => {
@@ -16,9 +17,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img
+              <Image
                 src="/logo.png"
                 alt="HomeNest Logo"
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-lg object-cover"
               />
               <span className="font-bold text-xl">STEM Kids Workshop</span>

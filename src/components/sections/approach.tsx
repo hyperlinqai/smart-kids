@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Approach() {
   return (
     <section id="details" className="py-20">
@@ -49,7 +51,7 @@ export default function Approach() {
 
             <button
               onClick={() => window.open('https://wa.me/97521234476?text=Hi! I want to book a STEM workshop for my child', '_blank')}
-              className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors flex items-center gap-2"
+              className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg flex items-center gap-2"
               data-testid="button-whatsapp-booking-2"
             >
               Book via WhatsApp – Limited Seats
@@ -57,11 +59,12 @@ export default function Approach() {
           </div>
 
           <div className="relative">
-            <img
+            <Image
               src="/our-learning.jpg"
               alt="Kids engaged in STEM learning activities"
+              width={600}
+              height={400}
               className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              loading="lazy"
               data-testid="img-classroom"
             />
           </div>

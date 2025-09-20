@@ -30,9 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+        {/* Google Fonts are loaded via Inter component above */}
         
         {/* Google Tag Manager */}
         <Script
@@ -107,9 +105,10 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* Facebook Pixel noscript */}
+        {/* Facebook Pixel noscript - using img for tracking pixel */}
         {process.env.NEXT_PUBLIC_FB_PIXEL_ID && process.env.NEXT_PUBLIC_FB_PIXEL_ID !== 'FB_PIXEL_ID' && (
           <noscript>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               height="1"
               width="1"
