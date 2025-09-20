@@ -1,13 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import * as analytics from '@/lib/analytics';
 
 export default function Analytics() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+    
     // Initialize Facebook Pixel
     analytics.fbqInit();
     
@@ -18,7 +25,7 @@ export default function Analytics() {
       // Track GTM pageview
       analytics.gtmPush({ event: 'pageview', page: pathname });
     }
-  }, [pathname]);
+  }, [pathname, isClient]);
 
   return null;
 }

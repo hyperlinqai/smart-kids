@@ -41,6 +41,9 @@ export const fbqInit = () => {
   if (typeof window === 'undefined') return;
   if ((window as any).fbq) return;
   
+  // Get the pixel ID from environment variable at runtime
+  const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '1187143980003173';
+  
   (function(f: any, b: any, e: any, v: any, n: any, t: any, s: any){
     if (f.fbq) return; 
     n = f.fbq = function(...args: any[]) { 
@@ -58,8 +61,8 @@ export const fbqInit = () => {
     s.parentNode.insertBefore(t, s);
   })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js', undefined, undefined, undefined);
 
-  if (!FB_PIXEL_ID || FB_PIXEL_ID === 'FB_PIXEL_ID') return;
-  (window as any).fbq('init', FB_PIXEL_ID);
+  if (!pixelId || pixelId === 'FB_PIXEL_ID') return;
+  (window as any).fbq('init', pixelId);
   (window as any).fbq('track', 'PageView');
 };
 

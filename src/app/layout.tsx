@@ -106,7 +106,9 @@ export default function RootLayout({
         </noscript>
 
         {/* Facebook Pixel noscript - using img for tracking pixel */}
-        {process.env.NEXT_PUBLIC_FB_PIXEL_ID && process.env.NEXT_PUBLIC_FB_PIXEL_ID !== 'FB_PIXEL_ID' && (
+        {process.env.NEXT_PUBLIC_FB_PIXEL_ID && 
+         process.env.NEXT_PUBLIC_FB_PIXEL_ID !== 'FB_PIXEL_ID' && 
+         process.env.NEXT_PUBLIC_FB_PIXEL_ID === '1187143980003173' && (
           <noscript>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
