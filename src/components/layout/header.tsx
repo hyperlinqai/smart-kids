@@ -30,11 +30,10 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="HomeNest Logo"
-              width={40}
-              height={40}
-              className="w-10 h-10 rounded-lg object-cover"
+              width={120}
+              height={120}
+              className="w-30 h-30 rounded-lg object-cover"
             />
-            <span className="font-bold text-xl text-foreground">STEM Kids Workshop</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
