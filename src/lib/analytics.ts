@@ -1,7 +1,7 @@
 // src/lib/analytics.ts
 export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-KR01PLEDZH';
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-KSW9H36R';
-export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '1310145566652864';
+export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '1187143980003173';
 
 export const isPlaceholder = (value: string) => {
   return value === 'G-KR01PLEDZH' || value === 'GTM-XXXXXXX' || value === 'FB_PIXEL_ID';
