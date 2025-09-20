@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-background/70 hover:text-background transition-colors"
+                className="text-background/70 hover:text-background hover:scale-110 transition-all duration-200 p-2 rounded-lg hover:bg-background/10"
                 aria-label="Facebook"
                 data-testid="link-facebook"
               >
@@ -40,7 +40,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-background/70 hover:text-background transition-colors"
+                className="text-background/70 hover:text-background hover:scale-110 transition-all duration-200 p-2 rounded-lg hover:bg-background/10"
                 aria-label="Instagram"
                 data-testid="link-instagram"
               >
@@ -55,7 +55,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick('about')}
-                  className="hover:text-background transition-colors"
+                  className="hover:text-background hover:translate-x-1 transition-all duration-200 text-left"
                   data-testid="footer-about"
                 >
                   About Us
@@ -64,7 +64,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick('programs')}
-                  className="hover:text-background transition-colors"
+                  className="hover:text-background hover:translate-x-1 transition-all duration-200 text-left"
                   data-testid="footer-programs"
                 >
                   Programs
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick('testimonials')}
-                  className="hover:text-background transition-colors"
+                  className="hover:text-background hover:translate-x-1 transition-all duration-200 text-left"
                   data-testid="footer-testimonials"
                 >
                   Testimonials
@@ -82,7 +82,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick('contact')}
-                  className="hover:text-background transition-colors"
+                  className="hover:text-background hover:translate-x-1 transition-all duration-200 text-left"
                   data-testid="footer-contact"
                 >
                   Contact
@@ -114,8 +114,8 @@ export default function Footer() {
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <div className="text-background/70">
             © 2025 Smart Kids. All rights reserved. |
-            <button className="hover:text-background transition-colors ml-1" data-testid="link-privacy">Privacy Policy</button> |
-            <button className="hover:text-background transition-colors ml-1" data-testid="link-terms">Terms of Service</button>
+            <button className="hover:text-background hover:underline transition-all duration-200 ml-1" data-testid="link-privacy">Privacy Policy</button> |
+            <button className="hover:text-background hover:underline transition-all duration-200 ml-1" data-testid="link-terms">Terms of Service</button>
           </div>
         </div>
       </div>

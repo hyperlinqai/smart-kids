@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="mt-8">
               <button
                 onClick={() => window.open('https://wa.me/97521234476?text=Hi! I want to book a STEM workshop for my child', '_blank')}
-                className="bg-green-600 text-white px-12 py-4 rounded-lg text-xl font-semibold hover:bg-green-700 transition-colors shadow-lg inline-flex items-center gap-3"
+                className="bg-green-600 text-white px-12 py-4 rounded-lg text-xl font-semibold hover:bg-green-700 hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg inline-flex items-center gap-3"
               >
                 📱 Book via WhatsApp – Limited Seats
               </button>
@@ -146,7 +146,7 @@ export default function Contact() {
                 </p>
                 <Button
                   onClick={handleScheduleTour}
-                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                  className="bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 hover:shadow-lg transition-all duration-200"
                   data-testid="button-schedule-tour"
                 >
                   Schedule a Tour
@@ -204,7 +204,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary text-primary-foreground py-4 text-lg font-semibold hover:bg-primary/90"
+                    className="w-full bg-primary text-primary-foreground py-4 text-lg font-semibold hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg transition-all duration-200 disabled:hover:scale-100 disabled:hover:shadow-none"
                     data-testid="button-submit-contact"
                   >
                     {isSubmitting ? "Processing..." : "Send Message"}

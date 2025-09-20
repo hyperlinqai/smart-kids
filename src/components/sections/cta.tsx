@@ -32,14 +32,14 @@ export default function CTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleEnrollNow}
-              className="bg-primary-foreground text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-foreground/90 transition-colors"
+              className="bg-primary-foreground text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-foreground/90 hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg"
               data-testid="button-enroll-now-cta"
             >
               Enroll Now
             </button>
             <button
               onClick={handleDownloadBrochure}
-              className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-foreground/10 transition-colors"
+              className="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-foreground/10 hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg"
               data-testid="button-download-brochure"
             >
               Download Brochure

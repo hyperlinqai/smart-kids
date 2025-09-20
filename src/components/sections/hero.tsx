@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleWhatsAppBooking}
-                className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg flex items-center justify-center gap-2"
+                className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg flex items-center justify-center gap-2"
                 data-testid="button-whatsapp-booking"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -39,7 +39,7 @@ export default function Hero() {
               </button>
               <button
                 onClick={handleLearnMore}
-                className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary/90 transition-colors"
+                className="bg-secondary text-secondary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary/90 hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg"
                 data-testid="button-learn-more"
               >
                 View Details

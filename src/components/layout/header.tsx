@@ -68,14 +68,14 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => window.open('https://wa.me/97521234476?text=Hi! I want to book a STEM workshop for my child', '_blank')}
-              className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors font-medium"
+              className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 hover:scale-105 hover:shadow-lg transition-all duration-200 font-medium"
               data-testid="button-book-header"
             >
               Book Now
             </button>
 
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors"
               aria-label="Toggle menu"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               data-testid="button-mobile-menu"
