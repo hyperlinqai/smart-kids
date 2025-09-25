@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #1a1a2e;
-    --secondary-color: #16213e;
-    --accent-color: #00ffdd;
+    /* SMART KIDS brand palette extracted from logo */
+    --brand-navy: #0B2430;
+    /* deep navy/teal cap & outline */
+    --brand-teal: #12343A;
+    /* dark teal body */
+    --brand-lime: #C7F34A;
+    /* lime beak/accents */
+    --brand-orange: #F7A24A;
+    /* glasses orange */
+
+    /* site mappings */
+    --primary-color: var(--brand-teal);
+    --secondary-color: var(--brand-navy);
+    --accent-color: var(--brand-lime);
+    --accent-alt: var(--brand-orange);
     --white-color: #ffffff;
     --text-color: rgba(255, 255, 255, 0.9);
 }
@@ -115,7 +127,7 @@ h1 {
     margin-bottom: 1rem;
     line-height: 1.1;
     color: var(--white-color);
-    text-shadow: 0 0 20px rgba(0, 255, 221, 0.5);
+    text-shadow: 0 0 20px rgba(199, 243, 74, 0.5);
 }
 
 h2 {
@@ -264,7 +276,7 @@ h2 {
     font-size: clamp(28px, 3vw, 40px);
     margin: 0 0 12px;
     color: var(--white-color);
-    text-shadow: 0 0 12px rgba(0, 255, 221, 0.25);
+    text-shadow: 0 0 12px rgba(199, 243, 74, 0.25);
 }
 
 .workshop-details .details-content>p {
@@ -307,14 +319,14 @@ h2 {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(1200px 200px at -10% -10%, rgba(0, 255, 221, 0.08), transparent 60%);
+    background: radial-gradient(1200px 200px at -10% -10%, rgba(199, 243, 74, 0.08), transparent 60%);
     pointer-events: none;
 }
 
 .workshop-details .detail-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
-    border-color: rgba(0, 255, 221, 0.25);
+    border-color: rgba(199, 243, 74, 0.25);
 }
 
 /* Headings */
@@ -359,12 +371,12 @@ h2 {
     height: 10px;
     border-radius: 50%;
     background: var(--accent-color);
-    box-shadow: 0 0 10px rgba(0, 255, 221, 0.6);
+    box-shadow: 0 0 10px rgba(199, 243, 74, 0.6);
 }
 
 /* Accent top border */
 .workshop-details .detail-item {
-    border-top: 3px solid rgba(0, 255, 221, 0.25);
+    border-top: 3px solid rgba(199, 243, 74, 0.25);
 }
 
 /* Optional actions row */
@@ -395,7 +407,7 @@ h2 {
     font-size: clamp(26px, 3vw, 38px);
     margin-bottom: 12px;
     color: var(--white-color);
-    text-shadow: 0 0 12px rgba(0, 255, 221, 0.25);
+    text-shadow: 0 0 12px rgba(199, 243, 74, 0.25);
 }
 
 .cta-whatsapp .cta-content p {
@@ -409,22 +421,34 @@ h2 {
     padding: 1rem 2.5rem;
     border-radius: 50px;
     font-size: 1.1rem;
-    font-weight: 600;
-    background-color: #25D366;
-    /* WhatsApp green */
-    color: #fff;
-    border: none;
+    font-weight: 700;
+    background-color: transparent;
+    /* outlined by default */
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
     display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .15s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .cta-whatsapp .btn:hover {
-    background-color: transparent;
-    color: #25D366;
-    border: 2px solid #25D366;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+    background-color: var(--accent-color);
+    /* filled on hover */
+    color: #0b2430;
+    /* brand navy for contrast */
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+    box-shadow: 0 12px 30px rgba(199, 243, 74, 0.35);
+}
+
+.cta-whatsapp .btn:focus-visible {
+    outline: 2px solid rgba(199, 243, 74, .7);
+    outline-offset: 3px;
+}
+
+.cta-whatsapp .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(11, 36, 48, .25);
 }
 
 /* =========================
@@ -447,7 +471,7 @@ h2 {
     font-size: clamp(28px, 3vw, 40px);
     color: var(--white-color);
     margin-bottom: 10px;
-    text-shadow: 0 0 12px rgba(0, 255, 221, 0.2);
+    text-shadow: 0 0 12px rgba(199, 243, 74, 0.2);
 }
 
 .faq-section .faq-intro {
@@ -477,7 +501,7 @@ h2 {
 }
 
 .faq-section .faq-item[open] {
-    border-color: rgba(0, 255, 221, 0.25);
+    border-color: rgba(199, 243, 74, 0.25);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -555,7 +579,7 @@ h2 {
     font-size: clamp(28px, 3vw, 40px);
     color: var(--white-color);
     margin-bottom: 10px;
-    text-shadow: 0 0 12px rgba(0, 255, 221, 0.22);
+    text-shadow: 0 0 12px rgba(199, 243, 74, 0.22);
 }
 
 .booking-section>.container>.booking-content>p {
@@ -677,8 +701,8 @@ h2 {
 }
 
 .booking-section .form-group input:focus {
-    border-color: rgba(0, 255, 221, 0.35);
-    box-shadow: 0 0 0 3px rgba(0, 255, 221, 0.15);
+    border-color: rgba(199, 243, 74, 0.35);
+    box-shadow: 0 0 0 3px rgba(199, 243, 74, 0.15);
     background: rgba(255, 255, 255, 0.12);
 }
 
@@ -810,8 +834,8 @@ h2 {
 }
 
 .site-footer .footer-social a:hover {
-    border-color: rgba(0, 255, 221, 0.35);
-    box-shadow: 0 6px 18px rgba(0, 255, 221, 0.18);
+    border-color: rgba(199, 243, 74, 0.35);
+    box-shadow: 0 6px 18px rgba(199, 243, 74, 0.18);
     transform: translateY(-2px);
 }
 
@@ -890,10 +914,12 @@ h2 {
 .site-header .logo {
     display: inline-block;
     background: #ffffff;
+    /* keep white for contrast */
     padding: 6px 10px;
     /* background holder padding */
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(199, 243, 74, 0.35);
+    box-shadow: 0 3px 10px rgba(11, 36, 48, 0.35);
     overflow: hidden;
     /* ensures clipped image edges are hidden */
 }
@@ -950,7 +976,7 @@ h2 {
     line-height: 1.1;
     margin-bottom: 12px;
     color: var(--white-color);
-    text-shadow: 0 0 18px rgba(0, 255, 221, 0.25);
+    text-shadow: 0 0 18px rgba(199, 243, 74, 0.25);
     animation: thankyou-pop 700ms ease-out both;
 }
 
@@ -983,4 +1009,284 @@ h2 {
     100% {
         transform: translateY(0) scale(1);
     }
+}
+
+/* Accent orange button variant */
+.btn-accent-alt {
+    background-color: var(--accent-alt);
+    color: var(--primary-color);
+}
+
+.btn-accent-alt:hover {
+    background-color: transparent;
+    border-color: var(--accent-alt);
+    color: var(--accent-alt);
+}
+
+/* =========================
+   Image Sections (Hero + Workshop)
+   ========================= */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    align-items: center;
+}
+
+@media (max-width: 980px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media card (shared) */
+.hero-media,
+.details-media {
+    position: relative;
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(11, 36, 48, 0.35);
+    /* brand navy shadow */
+}
+
+.hero-media img,
+.details-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/10;
+    transform: translateZ(0);
+}
+
+/* Badge + tick */
+.media-badge {
+    position: absolute;
+    left: 14px;
+    bottom: 12px;
+    background: var(--white-color);
+    color: var(--secondary-color);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    box-shadow: 0 6px 18px rgba(11, 36, 48, 0.25);
+}
+
+.media-tick {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-color);
+    /* brand lime */
+    color: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(11, 36, 48, 0.25);
+    font-weight: 700;
+}
+
+/* Workshop layout: grid + image */
+.details-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+    align-items: start;
+    margin-top: 8px;
+}
+
+@media (max-width: 980px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   Workshop Details — Redesigned (Brand)
+   ========================= */
+#workshop.workshop-details {
+    position: relative;
+    padding: 72px 0;
+}
+
+#workshop .details-content h2 {
+    text-align: center;
+    font-size: clamp(28px, 3.2vw, 40px);
+    margin: 0 0 8px;
+    color: var(--white-color);
+}
+
+#workshop .details-content h2 .accent {
+    color: var(--accent-alt);
+}
+
+#workshop .details-content>p {
+    text-align: center;
+    color: var(--text-color);
+    opacity: .9;
+    max-width: 760px;
+    margin: 0 auto 28px;
+    line-height: 1.65;
+}
+
+/* Two-column cards + media (uses existing .details-layout styles; these tweak spacing) */
+#workshop .details-layout {
+    gap: 26px;
+}
+
+#workshop .details-media img {
+    aspect-ratio: 4/3;
+}
+
+/* Card grid */
+#workshop .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (max-width:640px) {
+    #workshop .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card styles (brand lime accent on left) */
+#workshop .detail-item {
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    box-shadow: 0 10px 26px rgba(11, 36, 48, .28);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+#workshop .detail-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(11, 36, 48, .35);
+    border-color: rgba(199, 243, 74, .45);
+}
+
+/* Icon header with circular badge */
+#workshop .item-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 8px;
+}
+
+#workshop .item-head h3 {
+    margin: 0;
+    font-size: clamp(17px, 2.2vw, 20px);
+    color: var(--white-color);
+}
+
+#workshop .icon-circle {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(199, 243, 74, .18);
+    border: 1px solid rgba(199, 243, 74, .35);
+    color: var(--white-color);
+    font-size: 16px;
+    box-shadow: 0 6px 16px rgba(11, 36, 48, .25);
+}
+
+/* Text & lists */
+#workshop .detail-item p {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+#workshop .detail-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#workshop .detail-item ul li {
+    position: relative;
+    padding-left: 26px;
+    margin: 8px 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+#workshop .detail-item ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    color: var(--accent-color);
+    font-weight: 800;
+}
+
+/* =========================
+   Footer – Normalization & Fixes
+   ========================= */
+.site-footer {
+    background: rgba(0, 0, 0, 0.28);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer .container {
+    text-align: unset;
+}
+
+.site-footer p,
+.site-footer li {
+    color: var(--text-color);
+    opacity: .92;
+    line-height: 1.65;
+    font-size: 0.98rem;
+}
+
+.site-footer .footer-brand h3,
+.site-footer .footer-links h4,
+.site-footer .footer-contact h4 {
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-links ul,
+.site-footer .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color .2s ease, text-underline-offset .2s ease;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.site-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 8px;
+    padding-top: 14px;
+    text-align: center;
+}
+
+.site-footer .footer-bottom p {
+    font-size: 0.95rem;
+    opacity: .9;
+}
+
+.site-footer .footer-contact li span {
+    width: 20px;
+    display: inline-block;
 }
