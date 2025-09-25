@@ -1,5 +1,6 @@
-// /api/send-mail.js (Node runtime)
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -28,13 +29,14 @@ export default async function handler(req, res) {
         }
     } catch (err) {
         console.error("Body parse error", err);
-        res.setHeader("Location", "/thankyou.html?status=bad_body");
+        res.setHeader("Location", "/thankyou.html?status=bad_body&utm_source=website&utm_medium=form&utm_campaign=lead");
         return res.status(302).end();
     }
 
     // Honeypot
     if (website) {
-        res.setHeader("Location", "/thankyou.html");
+        const utmParams = "?utm_source=website&utm_medium=form&utm_campaign=lead";
+        res.setHeader("Location", "/thankyou.html" + utmParams);
         return res.status(302).end();
     }
 
@@ -44,25 +46,24 @@ export default async function handler(req, res) {
     }
 
     try {
-        const transporter = nodemailer.createTransport({
-            host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT || 587),
-            secure: false,
-            auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-        });
-
         const from = `SMART KIDS <no-reply@${req.headers.host || "example.com"}>`;
         const to = "kingswayrepair@gmail.com"; // change to your recipient
         const subject = `New Lead — ${name}`;
         const text = `Name: ${name}\nCity: ${city}\nPhone: ${phone}`;
 
-        await transporter.sendMail({ from, to, subject, text });
+        await resend.emails.send({
+            from,
+            to,
+            subject,
+            text,
+        });
 
-        res.setHeader("Location", "/thankyou.html");
+        const utmParams = "?utm_source=website&utm_medium=form&utm_campaign=lead";
+        res.setHeader("Location", "/thankyou.html" + utmParams);
         return res.status(302).end();
     } catch (e) {
         console.error("Mail send error", e);
-        res.setHeader("Location", "/thankyou.html?status=error");
+        res.setHeader("Location", "/thankyou.html?status=error&utm_source=website&utm_medium=form&utm_campaign=lead");
         return res.status(302).end();
     }
 }
